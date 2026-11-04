@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tag-guestbook
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: tag-guestbook
+  template:
+    metadata:
+      labels:
+        app: tag-guestbook
+    spec:
+      containers:
+        - image: gcr.io/google-samples/gb-frontend:v5
+          name: tag-guestbook
+          ports:
+            - containerPort: 80
