@@ -14,7 +14,7 @@ spec:
         app: tag-guestbook
     spec:
       containers:
-        - image: gcr.io/google-samples/gb-frontend:v5
+        - image: ghcr.io/tagitables/tag-argocd-guestbook:v1
           name: tag-guestbook
           ports:
             - containerPort: 80
